@@ -65,3 +65,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+DrawingUnitCircle/Base.lproj/Main.storyboard
+DrawingUnitCircle.xcodeproj/xcuserdata
+DrawingUnitCircle.xcodeproj/project.xcworkspace/xcuserdata
