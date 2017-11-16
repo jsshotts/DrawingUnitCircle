@@ -15,9 +15,9 @@ class UnitCircleView: UIView {
     
     var angle = (5 * CGFloat.pi)/3  //put in any angle value here (in radians), why can't I use "π" here?
     
-        {
-        didSet{setNeedsDisplay()}
-    }
+//        {
+//        didSet{setNeedsDisplay()}
+//    }
     
     let radius = CGFloat(120.0)       //adjust the radius of the unit circle and all parts adjust with it
     
@@ -25,6 +25,7 @@ class UnitCircleView: UIView {
     
     func setBackgroundColor() {
         self.backgroundColor = UIColor.lightGray
+        print ("setBackgroundColor()")
     }
     
     func drawUnitCircle(radius: CGFloat) {
@@ -107,17 +108,20 @@ class UnitCircleView: UIView {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        let position = touch?.location(in: self)
-        let xdistance = position?.x - self.frame.size.width/2
-        let ydistance = position?.y - self.frame.size.height/2
-        atan2f(<#T##Float#>, <#T##Float#>)
-    }
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch = touches.first
+//        let position = touch?.location(in: self)
+//        let xdistance = position!.x - self.frame.size.width/2
+//        let ydistance = position!.y - self.frame.size.height/2
+//        angle = atan2(xdistance, ydistance)
+//        print ("touchesBegan called, angle: \(angle)")
+//    }
+
     
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//
+//    }
+//
     
 
     /*

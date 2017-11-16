@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1CD2F4E71FABE30800C058EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2F4E61FABE30800C058EC /* AppDelegate.swift */; };
 		1CD2F4E91FABE30800C058EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2F4E81FABE30800C058EC /* ViewController.swift */; };
-		1CD2F4EC1FABE30800C058EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD2F4EA1FABE30800C058EC /* Main.storyboard */; };
 		1CD2F4EE1FABE30800C058EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD2F4ED1FABE30800C058EC /* Assets.xcassets */; };
 		1CD2F4F11FABE30800C058EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD2F4EF1FABE30800C058EC /* LaunchScreen.storyboard */; };
 		1CD2F4FC1FABE30800C058EC /* DrawingUnitCircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2F4FB1FABE30800C058EC /* DrawingUnitCircleTests.swift */; };
@@ -38,7 +37,6 @@
 		1CD2F4E31FABE30800C058EC /* DrawingUnitCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingUnitCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD2F4E61FABE30800C058EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CD2F4E81FABE30800C058EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1CD2F4EB1FABE30800C058EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CD2F4ED1FABE30800C058EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD2F4F01FABE30800C058EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CD2F4F21FABE30800C058EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				1CD2F4E61FABE30800C058EC /* AppDelegate.swift */,
 				1CD2F4E81FABE30800C058EC /* ViewController.swift */,
 				1CD2F5141FABE3F000C058EC /* UnitCircleView.swift */,
-				1CD2F4EA1FABE30800C058EC /* Main.storyboard */,
 				1CD2F4ED1FABE30800C058EC /* Assets.xcassets */,
 				1CD2F4EF1FABE30800C058EC /* LaunchScreen.storyboard */,
 				1CD2F4F21FABE30800C058EC /* Info.plist */,
@@ -237,7 +234,6 @@
 			files = (
 				1CD2F4F11FABE30800C058EC /* LaunchScreen.storyboard in Resources */,
 				1CD2F4EE1FABE30800C058EC /* Assets.xcassets in Resources */,
-				1CD2F4EC1FABE30800C058EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1CD2F4EA1FABE30800C058EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1CD2F4EB1FABE30800C058EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1CD2F4EF1FABE30800C058EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DrawingUnitCircle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jason.DrawingUnitCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DrawingUnitCircle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jason.DrawingUnitCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
