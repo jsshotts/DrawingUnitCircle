@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C70EA761FBE62E1000D47BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C70EA751FBE62E1000D47BE /* Main.storyboard */; };
 		1CD2F4E71FABE30800C058EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2F4E61FABE30800C058EC /* AppDelegate.swift */; };
 		1CD2F4E91FABE30800C058EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2F4E81FABE30800C058EC /* ViewController.swift */; };
 		1CD2F4EE1FABE30800C058EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD2F4ED1FABE30800C058EC /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C70EA751FBE62E1000D47BE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1CD2F4E31FABE30800C058EC /* DrawingUnitCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingUnitCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD2F4E61FABE30800C058EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CD2F4E81FABE30800C058EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				1CD2F4E61FABE30800C058EC /* AppDelegate.swift */,
 				1CD2F4E81FABE30800C058EC /* ViewController.swift */,
 				1CD2F5141FABE3F000C058EC /* UnitCircleView.swift */,
+				1C70EA751FBE62E1000D47BE /* Main.storyboard */,
 				1CD2F4ED1FABE30800C058EC /* Assets.xcassets */,
 				1CD2F4EF1FABE30800C058EC /* LaunchScreen.storyboard */,
 				1CD2F4F21FABE30800C058EC /* Info.plist */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C70EA761FBE62E1000D47BE /* Main.storyboard in Resources */,
 				1CD2F4F11FABE30800C058EC /* LaunchScreen.storyboard in Resources */,
 				1CD2F4EE1FABE30800C058EC /* Assets.xcassets in Resources */,
 			);
@@ -419,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XFLTTJ8H4;
 				INFOPLIST_FILE = DrawingUnitCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XFLTTJ8H4;
 				INFOPLIST_FILE = DrawingUnitCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

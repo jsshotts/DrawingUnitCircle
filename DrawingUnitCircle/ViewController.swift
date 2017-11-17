@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("viewDidLoad()")
         let canvasView = UnitCircleView(frame: CGRect(x:0, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height/2))
-        canvasView.setBackgroundColor() //I created a UIView programmatically using my UnitCircleView class
-        canvasView.createLabelHeight()
-        canvasView.createLabelWidth()
-        canvasView.createLabelAngle()
+        canvasView.radius = (self.view.frame.size.height/2)/2.4
+        canvasView.setBackgroundColor()
         view.addSubview(canvasView)
+        view.addSubview(canvasView.labelHeight)
+        view.addSubview(canvasView.labelWidth)
+        view.addSubview(canvasView.labelAngle)
         canvasView.isUserInteractionEnabled = true
         
         // Do any additional setup after loading the view, typically from a nib.
