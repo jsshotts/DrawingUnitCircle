@@ -10,10 +10,7 @@ import UIKit
 
 class UnitCircleView: UIView {
     
-    
-    let π = CGFloat.pi
-    
-    var angle = CGFloat(0) //put in any angle value here (in radians), why can't I use "π" here?
+    var angle = CGFloat(0)
     
         {
         didSet{setNeedsDisplay()}
@@ -39,9 +36,6 @@ class UnitCircleView: UIView {
         context?.setStrokeColor(UIColor.red.cgColor)
         context?.strokePath()
         
-        self.labelHeight.text = "height: \(abs(sin(angle)))"
-        self.labelWidth.text = "width: \(abs(cos(angle)))"
-        self.labelAngle.text = "angle: \(angle)"
     }
     
     func drawLines() {
@@ -82,35 +76,6 @@ class UnitCircleView: UIView {
         
     }
     
-//    func createLabelHeight(){
-//
-//        let height = (sin(angle)).description
-//
-//        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 120, height: 20))
-//        label.text = "height: " + height
-//        self.addSubview(label)
-//
-//    }
-//
-//    func createLabelWidth(){
-//
-//        let width = (cos(angle)).description
-//
-//        let label = UILabel(frame: CGRect(x: 20, y: 40, width: 120, height: 20))
-//        label.text = "width: " + width
-//        self.addSubview(label)
-//    }
-//
-//    func createLabelAngle(){
-//
-//        let Angle = angle.description
-//
-//        let label = UILabel(frame: CGRect(x: 20, y: 60, width: 120, height: 20))
-//        label.text = "theta: " + Angle
-//        self.addSubview(label)
-//
-//    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let position = touch?.location(in: self)
@@ -118,14 +83,41 @@ class UnitCircleView: UIView {
         let ydistance = -(position!.y - self.frame.size.height/2)
         angle = atan2(ydistance, xdistance)
 
-        self.labelHeight.text = "height: \(sin(angle))"
-        self.labelWidth.text = "width: \(cos(angle))"
         self.labelAngle.text = "angle: \(angle)"
         
-//        print ("x: \(xdistance)")
-//        print ("y: \(ydistance)")
-//        print ("atan2: \(atan2(ydistance, xdistance))")
-//        print ("touchesBegan called, angle: \(angle)")
+        if cos(angle) >= 0{
+            if cos(angle) < 0.00000000001{
+                self.labelWidth.text = "width: 0"
+            }
+            else{
+                self.labelWidth.text = "width: \(abs(cos(angle)))"
+            }
+        }
+        if cos(angle) < 0{
+            if cos(angle) > -0.000000000001{
+                self.labelWidth.text = "width: 0"
+            }
+            else{
+                self.labelWidth.text = "width: \(abs(cos(angle)))"
+            }
+        }
+        if sin(angle) >= 0{
+            if sin(angle) < 0.00000000001{
+                self.labelHeight.text = "height: 0"
+            }
+            else{
+                self.labelHeight.text = "height: \(abs(sin(angle)))"
+            }
+        }
+        if sin(angle) < 0{
+            if sin(angle) > -0.00000000001{
+                self.labelHeight.text = "height: 0"
+            }
+            else{
+                self.labelHeight.text = "height: \(abs(sin(angle)))"
+            }
+        }
+        
     }
 
     
@@ -135,23 +127,43 @@ class UnitCircleView: UIView {
         let xdistance = position!.x - self.frame.size.width/2
         let ydistance = -(position!.y - self.frame.size.height/2)
         angle = atan2(ydistance, xdistance)
-        
-        self.labelHeight.text = "height: \(sin(angle))"
-        self.labelWidth.text = "width: \(cos(angle))"
-        self.labelAngle.text = "angle: \(angle)"
-        
-//        print ("cos: \(cos(angle))")
-//        print ("sin: \(sin(angle))")
-        
-//        if cos(angle) < 0.00000000000000001 {
-//            self.labelWidth.text = "width: 0"
-//        }
 
-//        print("touchesMoved()")
-//        print ("x: \(xdistance)")
-//        print ("y: \(ydistance)")
-//        print ("atan2: \(atan2(ydistance, xdistance))")
-//        print ("touchesBegan called, angle: \(angle)")
+        self.labelAngle.text = "angle: \(angle)"
+
+
+        if cos(angle) >= 0{
+            if cos(angle) < 0.00000000001{
+                self.labelWidth.text = "width: 0"
+            }
+            else{
+                self.labelWidth.text = "width: \(abs(cos(angle)))"
+            }
+        }
+        if cos(angle) < 0{
+            if cos(angle) > -0.000000000001{
+                self.labelWidth.text = "width: 0"
+            }
+            else{
+                self.labelWidth.text = "width: \(abs(cos(angle)))"
+            }
+        }
+        if sin(angle) >= 0{
+            if sin(angle) < 0.00000000001{
+                self.labelHeight.text = "height: 0"
+            }
+            else{
+                self.labelHeight.text = "height: \(abs(sin(angle)))"
+            }
+        }
+        if sin(angle) < 0{
+            if sin(angle) > -0.00000000001{
+                self.labelHeight.text = "height: 0"
+            }
+            else{
+                self.labelHeight.text = "height: \(abs(sin(angle)))"
+            }
+        }
+    
     }
 
     
