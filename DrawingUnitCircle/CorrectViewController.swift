@@ -12,18 +12,26 @@ class CorrectViewController: UIViewController {
 
     var angle = CGFloat(0)
     var labelText = ""
+
+    @IBOutlet weak var Correct: UILabel!
     
     @IBOutlet weak var questionLabel: UILabel!
+
     @IBOutlet weak var UnitCircleView: UnitCircleView!
     
     @IBAction func arrowPressed(_ sender: Any) {
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UnitCircleView.radius = (UnitCircleView.frame.size.height/2)/1.2
         UnitCircleView.angle = angle
+        UnitCircleView.setBackgroundColor()
+        UnitCircleView.setLabelTextForFirstTime()
         UnitCircleView.isUserInteractionEnabled = false
         questionLabel.text = labelText
-        // Do any additional setup after loading the view.
+
     }
     
     override func didReceiveMemoryWarning() {

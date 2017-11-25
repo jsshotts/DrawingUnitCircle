@@ -163,6 +163,7 @@
                         <viewLayoutGuide key="safeArea" id="Vsq-xx-m5g"/>
                     </view>
                     <connections>
+                        <outlet property="Incorrect" destination="1xB-E8-rgg" id="mQ6-Hu-1RF"/>
                         <outlet property="UnitCircleView" destination="aPP-Yd-oB5" id="yIQ-HT-66Z"/>
                         <outlet property="questionLabel" destination="mvH-60-nHx" id="DVr-Fh-A6X"/>
                     </connections>
@@ -200,11 +201,6 @@
                                     <segue destination="z6E-37-jDg" kind="show" id="mRr-7z-Jlc"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hkz-il-MFz" customClass="UnitCircleView" customModule="DrawingUnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135" width="375" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question = Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnf-mY-R7l">
                                 <rect key="frame" x="0.0" y="404" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -212,12 +208,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-YI-1SS" customClass="UnitCircleView" customModule="DrawingUnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="135" width="375" height="272"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Eaz-M3-PT6"/>
                     </view>
                     <connections>
-                        <outlet property="UnitCircleView" destination="Hkz-il-MFz" id="fRU-op-V7f"/>
+                        <outlet property="Correct" destination="Txm-kK-KOb" id="xZh-tg-uUh"/>
+                        <outlet property="UnitCircleView" destination="DR5-YI-1SS" id="beG-sa-3fu"/>
                         <outlet property="questionLabel" destination="hnf-mY-R7l" id="1YG-Fx-jmK"/>
                     </connections>
                 </viewController>
@@ -227,6 +229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f2k-Zg-LiN"/>
+        <segue reference="mRr-7z-Jlc"/>
     </inferredMetricsTieBreakers>
 </document>

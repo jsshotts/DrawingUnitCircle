@@ -13,8 +13,6 @@ class LearnViewController: UIViewController {
     var question = ""
     var angle = CGFloat(0)
 
-    var valueFloat: CGFloat = 0
-    var valueInt: Int = 0
     var valueLocation: UInt32 = 0
     
     let trigSet = ["sin", "cos", "tan", "csc", "sec", "cot"]
@@ -86,133 +84,141 @@ class LearnViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear")
         questionLabel.text = question
         
         var buttonSet = [button1, button2, button3, button4]
         var tempAnswerSet = answerSet
+
+//        print (tempAnswer)
+//        print ("rounded: \(round(tempAnswer))")
         
-//        buttonSet[Int(valueLocation)]!.setTitle("\(valueInt)π", for: UIControlState.normal)
-//
-//        buttonSet.remove(at: Int(valueLocation))
-//
-//        buttonSet[0]!.setTitle("\(arc4random_uniform(10))π", for: UIControlState.normal)
-//        buttonSet[1]!.setTitle("\(arc4random_uniform(10))π", for: UIControlState.normal)
-//        buttonSet[2]!.setTitle("\(arc4random_uniform(10))π", for: UIControlState.normal)
-        print (tempAnswer)
-        print ("rounded: \(round(tempAnswer))")
         
-        if tempAnswer == 1.0{
+        buttonSet[Int(valueLocation)]!.setTitle("\(tempAnswer)", for: UIControlState.normal)
+        buttonSet.remove(at: Int(valueLocation))
             
-            print ("if statement()")
+        let button1tempAnswerIndex = Int(arc4random_uniform(15))
+        buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+        tempAnswerSet.remove(at: button1tempAnswerIndex)
 
-            buttonSet[Int(valueLocation)]!.setTitle("1", for: UIControlState.normal)
-            buttonSet.remove(at: Int(valueLocation))
-            tempAnswerSet.remove(at: 0)
-            print(tempAnswerSet)
-
-            let button1tempAnswerIndex = Int(arc4random_uniform(15))
-            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button1tempAnswerIndex)
-            print(tempAnswerSet)
-
-            let button2tempAnswerIndex = Int(arc4random_uniform(14))
-            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button2tempAnswerIndex)
-            print(tempAnswerSet)
-
-            let button3tempAnswerIndex = Int(arc4random_uniform(13))
-            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
-            print(tempAnswerSet)
-        }
-        if tempAnswer == -1.0{
-
-            buttonSet[Int(valueLocation)]!.setTitle("-1", for: UIControlState.normal)
-            buttonSet.remove(at: Int(valueLocation))
-            tempAnswerSet.remove(at: 1)
-
-            let button1tempAnswerIndex = Int(arc4random_uniform(15))
-            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button1tempAnswerIndex)
-
-            let button2tempAnswerIndex = Int(arc4random_uniform(14))
-            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button2tempAnswerIndex)
-
-            let button3tempAnswerIndex = Int(arc4random_uniform(13))
-            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
-        }
-        if tempAnswer <= 0.0{
-            if tempAnswer > -0.00000000000001{
-                buttonSet[Int(valueLocation)]!.setTitle("0", for: UIControlState.normal)
-                buttonSet.remove(at: Int(valueLocation))
-                tempAnswerSet.remove(at: 2)
-
-                let button1tempAnswerIndex = Int(arc4random_uniform(15))
-                buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
-                tempAnswerSet.remove(at: button1tempAnswerIndex)
-
-                let button2tempAnswerIndex = Int(arc4random_uniform(14))
-                buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
-                tempAnswerSet.remove(at: button2tempAnswerIndex)
-
-                let button3tempAnswerIndex = Int(arc4random_uniform(13))
-                buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
-            }
-        }
-        if tempAnswer >= 0.0{
-            if tempAnswer < 0.00000000000001{
+        let button2tempAnswerIndex = Int(arc4random_uniform(14))
+        buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+        tempAnswerSet.remove(at: button2tempAnswerIndex)
             
-                buttonSet[Int(valueLocation)]!.setTitle("0", for: UIControlState.normal)
-                buttonSet.remove(at: Int(valueLocation))
-                tempAnswerSet.remove(at: 2)
-                
-                let button1tempAnswerIndex = Int(arc4random_uniform(15))
-                buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
-                tempAnswerSet.remove(at: button1tempAnswerIndex)
-            
-                let button2tempAnswerIndex = Int(arc4random_uniform(14))
-                buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
-                tempAnswerSet.remove(at: button2tempAnswerIndex)
-            
-                let button3tempAnswerIndex = Int(arc4random_uniform(13))
-                buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
-            }
-        }
-        if tempAnswer == 0.5{
+        let button3tempAnswerIndex = Int(arc4random_uniform(13))
+        buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
 
-            buttonSet[Int(valueLocation)]!.setTitle("1/2", for: UIControlState.normal)
-            buttonSet.remove(at: Int(valueLocation))
-            tempAnswerSet.remove(at: 3)
-
-            let button1tempAnswerIndex = Int(arc4random_uniform(15))
-            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button1tempAnswerIndex)
-
-            let button2tempAnswerIndex = Int(arc4random_uniform(14))
-            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button2tempAnswerIndex)
-
-            let button3tempAnswerIndex = Int(arc4random_uniform(13))
-            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
-        }
-        if tempAnswer == -0.5{
-
-            buttonSet[Int(valueLocation)]!.setTitle("-1/2", for: UIControlState.normal)
-            buttonSet.remove(at: Int(valueLocation))
-            tempAnswerSet.remove(at: 4)
-
-            let button1tempAnswerIndex = Int(arc4random_uniform(15))
-            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button1tempAnswerIndex)
-
-            let button2tempAnswerIndex = Int(arc4random_uniform(14))
-            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
-            tempAnswerSet.remove(at: button2tempAnswerIndex)
-
-            let button3tempAnswerIndex = Int(arc4random_uniform(13))
-            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
-        }
+        
+//        if tempAnswer == 1.0{
+//
+//            print ("if statement()")
+//
+//            buttonSet[Int(valueLocation)]!.setTitle("1", for: UIControlState.normal)
+//            buttonSet.remove(at: Int(valueLocation))
+//            tempAnswerSet.remove(at: 0)
+//            print(tempAnswerSet)
+//
+//            let button1tempAnswerIndex = Int(arc4random_uniform(15))
+//            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button1tempAnswerIndex)
+//            print(tempAnswerSet)
+//
+//            let button2tempAnswerIndex = Int(arc4random_uniform(14))
+//            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button2tempAnswerIndex)
+//            print(tempAnswerSet)
+//
+//            let button3tempAnswerIndex = Int(arc4random_uniform(13))
+//            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
+//            print(tempAnswerSet)
+//        }
+//        if tempAnswer == -1.0{
+//
+//            buttonSet[Int(valueLocation)]!.setTitle("-1", for: UIControlState.normal)
+//            buttonSet.remove(at: Int(valueLocation))
+//            tempAnswerSet.remove(at: 1)
+//
+//            let button1tempAnswerIndex = Int(arc4random_uniform(15))
+//            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button1tempAnswerIndex)
+//
+//            let button2tempAnswerIndex = Int(arc4random_uniform(14))
+//            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button2tempAnswerIndex)
+//
+//            let button3tempAnswerIndex = Int(arc4random_uniform(13))
+//            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
+//        }
+//        if tempAnswer <= 0.0{
+//            if tempAnswer > -0.00000000000001{
+//                buttonSet[Int(valueLocation)]!.setTitle("0", for: UIControlState.normal)
+//                buttonSet.remove(at: Int(valueLocation))
+//                tempAnswerSet.remove(at: 2)
+//
+//                let button1tempAnswerIndex = Int(arc4random_uniform(15))
+//                buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+//                tempAnswerSet.remove(at: button1tempAnswerIndex)
+//
+//                let button2tempAnswerIndex = Int(arc4random_uniform(14))
+//                buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+//                tempAnswerSet.remove(at: button2tempAnswerIndex)
+//
+//                let button3tempAnswerIndex = Int(arc4random_uniform(13))
+//                buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
+//            }
+//        }
+//        if tempAnswer >= 0.0{
+//            if tempAnswer < 0.00000000000001{
+//
+//                buttonSet[Int(valueLocation)]!.setTitle("0", for: UIControlState.normal)
+//                buttonSet.remove(at: Int(valueLocation))
+//                tempAnswerSet.remove(at: 2)
+//
+//                let button1tempAnswerIndex = Int(arc4random_uniform(15))
+//                buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+//                tempAnswerSet.remove(at: button1tempAnswerIndex)
+//
+//                let button2tempAnswerIndex = Int(arc4random_uniform(14))
+//                buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+//                tempAnswerSet.remove(at: button2tempAnswerIndex)
+//
+//                let button3tempAnswerIndex = Int(arc4random_uniform(13))
+//                buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
+//            }
+//        }
+//        if tempAnswer == 0.5{
+//
+//            buttonSet[Int(valueLocation)]!.setTitle("1/2", for: UIControlState.normal)
+//            buttonSet.remove(at: Int(valueLocation))
+//            tempAnswerSet.remove(at: 3)
+//
+//            let button1tempAnswerIndex = Int(arc4random_uniform(15))
+//            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button1tempAnswerIndex)
+//
+//            let button2tempAnswerIndex = Int(arc4random_uniform(14))
+//            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button2tempAnswerIndex)
+//
+//            let button3tempAnswerIndex = Int(arc4random_uniform(13))
+//            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
+//        }
+//        if tempAnswer == -0.5{
+//
+//            buttonSet[Int(valueLocation)]!.setTitle("-1/2", for: UIControlState.normal)
+//            buttonSet.remove(at: Int(valueLocation))
+//            tempAnswerSet.remove(at: 4)
+//
+//            let button1tempAnswerIndex = Int(arc4random_uniform(15))
+//            buttonSet[0]!.setTitle(tempAnswerSet[button1tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button1tempAnswerIndex)
+//
+//            let button2tempAnswerIndex = Int(arc4random_uniform(14))
+//            buttonSet[1]!.setTitle(tempAnswerSet[button2tempAnswerIndex], for: UIControlState.normal)
+//            tempAnswerSet.remove(at: button2tempAnswerIndex)
+//
+//            let button3tempAnswerIndex = Int(arc4random_uniform(13))
+//            buttonSet[2]!.setTitle(tempAnswerSet[button3tempAnswerIndex], for: UIControlState.normal)
+//        }
 //        if round(tempAnswer) == round(sqrt(2)/2){
 //
 //            buttonSet[Int(valueLocation)]!.setTitle("sqrtf(2)/2", for: UIControlState.normal)
@@ -467,8 +473,6 @@ class LearnViewController: UIViewController {
 //            tempAnswer = 1/tan(angle)
 //        }
 //
-//        valueFloat = numberFloat
-//        valueInt = number
 //
 //        valueLocation = arc4random_uniform(4)
 //        print(tempTrigFunc)
@@ -538,8 +542,6 @@ class LearnViewController: UIViewController {
             print ("cot: \(tempAnswer)")
         }
         
-        valueFloat = numberFloat
-        valueInt = number
         
         valueLocation = arc4random_uniform(4)
     }
@@ -561,7 +563,7 @@ class LearnViewController: UIViewController {
             let destination = segue.destination as? IncorrectViewController
             
             destination?.angle = angle
-            destination?.labelText = question
+            destination?.labelText = "\(question) = \(tempAnswer)"
         }
         
         if segue.identifier == "ShowCorrectScene" {
@@ -569,7 +571,7 @@ class LearnViewController: UIViewController {
             let destination = segue.destination as? CorrectViewController
             
             destination?.angle = angle
-            destination?.labelText = question
+            destination?.labelText = "\(question) = \(tempAnswer)"
         }
 
     }
