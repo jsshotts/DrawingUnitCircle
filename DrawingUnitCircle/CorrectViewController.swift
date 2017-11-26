@@ -29,6 +29,16 @@ class CorrectViewController: UIViewController {
         UnitCircleView.angle = angle
         UnitCircleView.setBackgroundColor()
         UnitCircleView.setLabelTextForFirstTime()
+        
+//        if UnitCircleView.angle.truncatingRemainder(dividingBy: 2*CGFloat.pi) > 2{
+//            UnitCircleView.angle = UnitCircleView.angle - (2*CGFloat.pi)
+//            if UnitCircleView.angle.truncatingRemainder(dividingBy: 2*CGFloat.pi) > 2{
+//                UnitCircleView.angle = UnitCircleView.angle - (2*CGFloat.pi)
+//                if UnitCircleView.angle.truncatingRemainder(dividingBy: 2*CGFloat.pi) > 2{
+//                    UnitCircleView.angle = UnitCircleView.angle - (2*CGFloat.pi)
+//                }
+//            }
+//        }
         UnitCircleView.isUserInteractionEnabled = false
         questionLabel.text = labelText
 

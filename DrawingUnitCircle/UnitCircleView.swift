@@ -94,19 +94,49 @@ class UnitCircleView: UIView {
         labelWidth.center.x = (centerx + x2)/2
         labelWidth.center.y = centery + centery/15
         
-        labelHeight.center.x = x2 + self.frame.size.width/15
+        labelHeight.center.x = x2 + self.frame.size.width/13
         if angle > CGFloat.pi/2{
-            labelHeight.center.x = x2 - self.frame.size.width/15
+            labelHeight.center.x = x2 - self.frame.size.width/13
         }
         if angle >= (3*CGFloat.pi)/2{
-            labelHeight.center.x = x2 + self.frame.size.width/15
+            labelHeight.center.x = x2 + self.frame.size.width/16
         }
+//
+//        if angle > (5*CGFloat.pi)/2{
+//            labelHeight.center.x = x2 + self.frame.size.width/16
+//        }
+//        if angle >= (7*CGFloat.pi)/2{
+//            labelHeight.center.x = x2 + self.frame.size.width/16
+//        }
+//
+//        if angle > (9*CGFloat.pi)/2{
+//            labelHeight.center.x = x2 + self.frame.size.width/16
+//        }
+//        if angle >= (11*CGFloat.pi)/2{
+//            labelHeight.center.x = x2 + self.frame.size.width/16
+//        }
         labelHeight.center.y = ((CGFloat(self.frame.size.height) - y2) + centery)/2
         
         labelAngle.center.x = centerx + (centerx + x2)/15
         if angle >= CGFloat.pi{
             labelAngle.center.x = centerx - (centerx + x2)/20
         }
+//        if angle > 2*CGFloat.pi{
+//            labelAngle.center.x = centerx - (centerx + x2)/20
+//        }
+//        if angle >= 3*CGFloat.pi{
+//            labelAngle.center.x = centerx - (centerx + x2)/20
+//        }
+//        if angle > 4*CGFloat.pi{
+//            labelAngle.center.x = centerx - (centerx + x2)/20
+//        }
+//        if angle >= 5*CGFloat.pi{
+//            labelAngle.center.x = centerx - (centerx + x2)/20
+//        }
+//        if angle > 6*CGFloat.pi{
+//            labelAngle.center.x = centerx - (centerx + x2)/20
+//        }
+
         labelAngle.center.y = centery - self.frame.size.height/40
         
         

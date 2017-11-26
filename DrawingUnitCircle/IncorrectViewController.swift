@@ -30,6 +30,20 @@ class IncorrectViewController: UIViewController {
         UnitCircleView.setBackgroundColor()
         UnitCircleView.setLabelTextForFirstTime()
         UnitCircleView.isUserInteractionEnabled = false
+        
+//        print(UnitCircleView.angle)
+//        if UnitCircleView.angle.truncatingRemainder(dividingBy: 2*CGFloat.pi) > 2{
+//            UnitCircleView.angle = UnitCircleView.angle - (2*CGFloat.pi)
+//            print(UnitCircleView.angle)
+//            if UnitCircleView.angle.truncatingRemainder(dividingBy: 2*CGFloat.pi) > 2{
+//                UnitCircleView.angle = UnitCircleView.angle - (2*CGFloat.pi)
+//                print(UnitCircleView.angle)
+//                if UnitCircleView.angle.truncatingRemainder(dividingBy: 2*CGFloat.pi) > 2{
+//                    UnitCircleView.angle = UnitCircleView.angle - (2*CGFloat.pi)
+//                    print(UnitCircleView.angle)
+//                }
+//            }
+//        }
         questionLabel.text = labelText
        
     }

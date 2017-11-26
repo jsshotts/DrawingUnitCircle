@@ -539,7 +539,6 @@ class LearnViewController: UIViewController {
         }
         if tempTrigFunc == trigSet[5]{
             tempAnswer = cos(angle)/sin(angle)
-            print ("cot: \(tempAnswer)")
         }
         
         
