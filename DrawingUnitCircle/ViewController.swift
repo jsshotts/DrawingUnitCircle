@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         canvasView.setLabelTextForFirstTime()
         canvasView.isUserInteractionEnabled = true
         view.addSubview(canvasView)
+        view.backgroundColor? = UIColor.purple
         // Do any additional setup after loading the view, typically from a nib.
     }
 
